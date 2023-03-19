@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Bilibili Registration</title>
+  <style>
+    body {
+      background-image: url("Rlogo.png");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: 300px 100px;
+      align-content: center;
+  }
+
+    input[type=text], input[type=password] {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      box-shadow: darkred;
+    }
+    input[type=SignUp] {
+      background-color: #greenyellow;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 20px;
+      width: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .fa:hover {
+      opacity: 10px;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+      border: none;
+    }
+
+    .form-group {
+      display: table-row;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+     .form-control {
+      width: 50%;
+    }
+
+    .error input {
+      border-style: none solid none;
+      border-color: #cOO;
+      border-width: 2px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin: 5px;
+    }
+    .success {
+      color: green;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+  </style>
+</body>
+</head>
+<body><br><br><br><br>
+
+  <center> <h2>CREATE YOUR ACCOUNT</h2>
+ <center><form>
+    <div class="form-group">
+      <label for="lastname">Fullname:</label>
+      <input type="text" id="lastname" name="lastname" class="form-control" />
+      <span class="error-message" id="lastname-error"></span>
+    </div>
+    <div class="form-group">
+      <label for="emailaddress">Email Address:</label>
+      <input type="text" id="emailaddress" name="emailaddress" class="form-control" />
+      <span class="error-message" id="lastname-error"></span>
+    </div>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" class="form-control" />
+      <span class="error-message" id="username-error"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" class="form-control" />
+      <span class="error-message" id="password-error"></span>
+    </div>
+    <div class="form-group"><center>
+      <label for="re-typepassword">Re-type Password:</label>
+      <input type="text" id="re-typepassword" name="re-typepassword" class="form-control" />
+      <span class="error-message" id="re-typepassword-error"></span></center>
+    </div>
+    </div><br>
+    <center><button type="submit">Sign Up</button></center>
+  </form></center>
+  <div id="message"></div><br>
+
+  <center></center><section>
+    <a href="https://www.facebook.com/chase.monteverdi.65"><button class="btn"><i class="fa fa-facebook"></i></button></a>
+    <a href="https://www.google.com/"><button class="btn"><i class="fa fa-google"></i></button></a>
+    <a href="https://www.twitter.com/"><button class="btn"><i class="fa fa-twitter"></i></button></a>
+  </section></center>
+
+  <script>
+    const form = document.querySelector('form')  
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const usernameError = document.getElementById("username-error");
+    const passwordError = document.getElementById("password-error");
+  
+    usernameInput.addEventListener("input", function() {
+      if (usernameInput.value.length < 8 { 
+        usernameError.textContent = "Username must be at least 8 characters";
+        usernameError.style.display = "block";
+      } else {
+        usernameError.style.display = "none";
+      }
+    });
+
+
+    passwordInput.addEventListener("input", function() {
+      if (passwordInput.value.length < 8 {
+        passwordError.textContent = "Password must be at least 8 characters, must contain atleast 1 uppercase, lowercase,numeric number and especial characters.";
+        passwordError.style.display = "block";
+      } else {
+        passwordError.style.display = "none";
+      }
+    });
+
+    
+
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="script.js"> </script>
+</body>
+</html>
